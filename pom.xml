@@ -12,6 +12,7 @@
         <module>annotations</module>
         <module>onjava</module>
         <module>arrays</module>
+        <module>collections</module>
     </modules>
 
     <properties>
