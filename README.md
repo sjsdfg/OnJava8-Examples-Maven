@@ -2,7 +2,7 @@
 
 this is the maven version of OnJava8-Examples https://github.com/BruceEckel/OnJava8-Examples
 
-more easy to import
+more easier to import
 
 but not guarantee this is code is run ok.
 
