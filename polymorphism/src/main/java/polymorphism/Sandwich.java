@@ -4,6 +4,7 @@
 // Visit http://OnJava8.com for more book information.
 // Order of constructor calls
 // {java polymorphism.Sandwich}
+package polymorphism;
 
 class Meal {
     Meal() {

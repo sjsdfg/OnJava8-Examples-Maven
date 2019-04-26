@@ -4,7 +4,7 @@
 // Visit http://OnJava8.com for more book information.
 // Overloading instead of upcasting
 // {java polymorphism.music.Music2}
-package music;
+package polymorphism.music;
 
 class Stringed extends Instrument {
     @Override

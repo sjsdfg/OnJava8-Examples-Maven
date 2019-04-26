@@ -4,6 +4,7 @@
 // Visit http://OnJava8.com for more book information.
 // Cleanup and inheritance
 // {java polymorphism.Frog}
+package polymorphism;
 
 class Characteristic {
     private String s;

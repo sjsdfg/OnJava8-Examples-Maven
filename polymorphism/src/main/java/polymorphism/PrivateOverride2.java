@@ -4,6 +4,7 @@
 // Visit http://OnJava8.com for more book information.
 // Detecting a mistaken override using @Override
 // {WillNotCompile}
+package polymorphism;
 
 public class PrivateOverride2 {
     private void f() {
@@ -17,7 +18,7 @@ public class PrivateOverride2 {
 }
 
 class Derived2 extends PrivateOverride2 {
-    @Override
+    //  @Override
     public void f() {
         System.out.println("public f()");
     }

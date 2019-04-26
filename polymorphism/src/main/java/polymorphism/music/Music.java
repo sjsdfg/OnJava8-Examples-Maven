@@ -4,7 +4,7 @@
 // Visit http://OnJava8.com for more book information.
 // Inheritance & upcasting
 // {java polymorphism.music.Music}
-package music;
+package polymorphism.music;
 
 public class Music {
     public static void tune(Instrument i) {

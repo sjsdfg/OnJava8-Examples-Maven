@@ -4,6 +4,7 @@
 // Visit http://OnJava8.com for more book information.
 // Trying to override a private method
 // {java polymorphism.PrivateOverride}
+package polymorphism;
 
 public class PrivateOverride {
     private void f() {
