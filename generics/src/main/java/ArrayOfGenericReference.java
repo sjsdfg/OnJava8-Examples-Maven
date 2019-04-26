@@ -3,8 +3,9 @@
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
 
-class Generic<T> {}
+class Generic<T> {
+}
 
 public class ArrayOfGenericReference {
-  static Generic<Integer>[] gia;
+    static Generic<Integer>[] gia;
 }

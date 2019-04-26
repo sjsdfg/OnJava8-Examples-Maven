@@ -4,7 +4,13 @@
 // Visit http://OnJava8.com for more book information.
 
 class Manipulator3 {
-  private HasF obj;
-  Manipulator3(HasF x) { obj = x; }
-  public void manipulate() { obj.f(); }
+    private HasF obj;
+
+    Manipulator3(HasF x) {
+        obj = x;
+    }
+
+    public void manipulate() {
+        obj.f();
+    }
 }

@@ -5,9 +5,9 @@
 // A working key
 
 public class SpringDetector2 {
-  public static void main(String[] args) {
-    SpringDetector.detectSpring(Groundhog2.class);
-  }
+    public static void main(String[] args) {
+        SpringDetector.detectSpring(Groundhog2.class);
+    }
 }
 /* Output:
 Groundhog #0: Six more weeks of Winter!

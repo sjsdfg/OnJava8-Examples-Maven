@@ -2,16 +2,18 @@
 // (c)2017 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
-import onjava.*;
-import java.util.stream.*;
+
+import onjava.BasicSupplier;
+
+import java.util.stream.Stream;
 
 public class BasicSupplierDemo {
-  public static void main(String[] args) {
-    Stream.generate(
-      BasicSupplier.create(CountedObject.class))
-      .limit(5)
-      .forEach(System.out::println);
-  }
+    public static void main(String[] args) {
+        Stream.generate(
+                BasicSupplier.create(CountedObject.class))
+                .limit(5)
+                .forEach(System.out::println);
+    }
 }
 /* Output:
 CountedObject 0

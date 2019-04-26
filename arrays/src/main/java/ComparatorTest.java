@@ -3,25 +3,27 @@
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
 // Implementing a Comparator for a class
-import java.util.*;
-import onjava.*;
-import static onjava.ArrayShow.*;
+
+import java.util.Arrays;
+import java.util.Comparator;
+
+import static onjava.ArrayShow.show;
 
 class CompTypeComparator
-implements Comparator<CompType> {
-  public int compare(CompType o1, CompType o2) {
-    return (o1.j < o2.j ? -1 : (o1.j == o2.j ? 0 : 1));
-  }
+        implements Comparator<CompType> {
+    public int compare(CompType o1, CompType o2) {
+        return (o1.j < o2.j ? -1 : (o1.j == o2.j ? 0 : 1));
+    }
 }
 
 public class ComparatorTest {
-  public static void main(String[] args) {
-    CompType[] a = new CompType[12];
-    Arrays.setAll(a, n -> CompType.get());
-    show("Before sorting", a);
-    Arrays.sort(a, new CompTypeComparator());
-    show("After sorting", a);
-  }
+    public static void main(String[] args) {
+        CompType[] a = new CompType[12];
+        Arrays.setAll(a, n -> CompType.get());
+        show("Before sorting", a);
+        Arrays.sort(a, new CompTypeComparator());
+        show("After sorting", a);
+    }
 }
 /* Output:
 Before sorting: [[i = 35, j = 37], [i = 41, j = 20], [i

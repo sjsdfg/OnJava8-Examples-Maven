@@ -4,9 +4,11 @@
 // Visit http://OnJava8.com for more book information.
 
 interface InterfaceWithDefault {
-  void firstMethod();
-  void secondMethod();
-  default void newMethod() {
-    System.out.println("newMethod");
-  }
+    void firstMethod();
+
+    void secondMethod();
+
+    default void newMethod() {
+        System.out.println("newMethod");
+    }
 }

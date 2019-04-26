@@ -4,9 +4,9 @@
 // Visit http://OnJava8.com for more book information.
 
 public class SerialNumberTest {
-  public static void main(String[] args) {
-    SerialNumberChecker.test(new SerialNumbers());
-  }
+    public static void main(String[] args) {
+        SerialNumberChecker.test(new SerialNumbers());
+    }
 }
 /* Output:
 Duplicate: 148044

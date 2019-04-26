@@ -4,11 +4,15 @@
 // Visit http://OnJava8.com for more book information.
 
 public class CountedObject {
-  private static long counter = 0;
-  private final long id = counter++;
-  public long id() { return id; }
-  @Override
-  public String toString() {
-    return "CountedObject " + id;
-  }
+    private static long counter = 0;
+    private final long id = counter++;
+
+    public long id() {
+        return id;
+    }
+
+    @Override
+    public String toString() {
+        return "CountedObject " + id;
+    }
 }

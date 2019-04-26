@@ -2,30 +2,34 @@
 // (c)2017 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
-import typeinfo.pets.*;
-import java.util.*;
+
+import pets.Pet;
+import pets.Pets;
+
+import java.util.List;
+import java.util.ListIterator;
 
 public class ListIteration {
-  public static void main(String[] args) {
-    List<Pet> pets = Pets.list(8);
-    ListIterator<Pet> it = pets.listIterator();
-    while(it.hasNext())
-      System.out.print(it.next() +
-        ", " + it.nextIndex() +
-        ", " + it.previousIndex() + "; ");
-    System.out.println();
-    // Backwards:
-    while(it.hasPrevious())
-      System.out.print(it.previous().id() + " ");
-    System.out.println();
-    System.out.println(pets);
-    it = pets.listIterator(3);
-    while(it.hasNext()) {
-      it.next();
-      it.set(Pets.get());
+    public static void main(String[] args) {
+        List<Pet> pets = Pets.list(8);
+        ListIterator<Pet> it = pets.listIterator();
+        while (it.hasNext())
+            System.out.print(it.next() +
+                    ", " + it.nextIndex() +
+                    ", " + it.previousIndex() + "; ");
+        System.out.println();
+        // Backwards:
+        while (it.hasPrevious())
+            System.out.print(it.previous().id() + " ");
+        System.out.println();
+        System.out.println(pets);
+        it = pets.listIterator(3);
+        while (it.hasNext()) {
+            it.next();
+            it.set(Pets.get());
+        }
+        System.out.println(pets);
     }
-    System.out.println(pets);
-  }
 }
 /* Output:
 Rat, 1, 0; Manx, 2, 1; Cymric, 3, 2; Mutt, 4, 3; Pug,

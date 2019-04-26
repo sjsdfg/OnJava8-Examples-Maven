@@ -2,16 +2,22 @@
 // (c)2017 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
-import java.util.*;
+
+import java.util.Random;
 
 public interface RandomDoubles {
-  Random RAND = new Random(47);
-  default double next() { return RAND.nextDouble(); }
-  static void main(String[] args) {
-    RandomDoubles rd = new RandomDoubles() {};
-    for(int i = 0; i < 7; i ++)
-      System.out.print(rd.next() + " ");
-  }
+    Random RAND = new Random(47);
+
+    default double next() {
+        return RAND.nextDouble();
+    }
+
+    static void main(String[] args) {
+        RandomDoubles rd = new RandomDoubles() {
+        };
+        for (int i = 0; i < 7; i++)
+            System.out.print(rd.next() + " ");
+    }
 }
 /* Output:
 0.7271157860730044 0.5309454508634242

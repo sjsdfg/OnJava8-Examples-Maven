@@ -2,19 +2,21 @@
 // (c)2017 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
-import java.util.concurrent.*;
-import java.util.stream.*;
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.stream.IntStream;
 
 public class SingleThreadExecutor2 {
-  public static void main(String[] args)
-    throws InterruptedException {
-    ExecutorService exec =
-      Executors.newSingleThreadExecutor();
-    IntStream.range(0, 10)
-      .mapToObj(NapTask::new)
-      .forEach(exec::execute);
-    exec.shutdown();
-  }
+    public static void main(String[] args)
+            throws InterruptedException {
+        ExecutorService exec =
+                Executors.newSingleThreadExecutor();
+        IntStream.range(0, 10)
+                .mapToObj(NapTask::new)
+                .forEach(exec::execute);
+        exec.shutdown();
+    }
 }
 /* Output:
 NapTask[0] pool-1-thread-1

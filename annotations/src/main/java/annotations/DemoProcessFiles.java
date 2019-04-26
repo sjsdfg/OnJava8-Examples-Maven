@@ -2,13 +2,14 @@ package annotations;// annotations/DemoProcessFiles.java
 // (c)2017 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
+
 import onjava.ProcessFiles;
 
 public class DemoProcessFiles {
-  public static void main(String[] args) {
-    new ProcessFiles(file -> System.out.println(file),
-      "java").start(args);
-  }
+    public static void main(String[] args) {
+        new ProcessFiles(file -> System.out.println(file),
+                "java").start(args);
+    }
 }
 /* Output:
 .\AtUnitExample1.java

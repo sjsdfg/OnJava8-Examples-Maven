@@ -4,8 +4,8 @@
 // Visit http://OnJava8.com for more book information.
 
 public class FullQualification {
-  public static void main(String[] args) {
-    java.util.ArrayList list =
-      new java.util.ArrayList();
-  }
+    public static void main(String[] args) {
+        java.util.ArrayList list =
+                new java.util.ArrayList();
+    }
 }

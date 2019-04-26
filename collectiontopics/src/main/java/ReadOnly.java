@@ -3,46 +3,49 @@
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
 // Using the Collections.unmodifiable methods
+
+import onjava.Countries;
+
 import java.util.*;
-import onjava.*;
 
 public class ReadOnly {
-  static Collection<String> data =
-    new ArrayList<>(Countries.names(6));
-  public static void main(String[] args) {
-    Collection<String> c =
-      Collections.unmodifiableCollection(
-        new ArrayList<>(data));
-    System.out.println(c); // Reading is OK
-    //- c.add("one"); // Can't change it
+    static Collection<String> data =
+            new ArrayList<>(Countries.names(6));
 
-    List<String> a = Collections.unmodifiableList(
-        new ArrayList<>(data));
-    ListIterator<String> lit = a.listIterator();
-    System.out.println(lit.next()); // Reading is OK
-    //- lit.add("one"); // Can't change it
+    public static void main(String[] args) {
+        Collection<String> c =
+                Collections.unmodifiableCollection(
+                        new ArrayList<>(data));
+        System.out.println(c); // Reading is OK
+        //- c.add("one"); // Can't change it
 
-    Set<String> s = Collections.unmodifiableSet(
-      new HashSet<>(data));
-    System.out.println(s); // Reading is OK
-    //- s.add("one"); // Can't change it
+        List<String> a = Collections.unmodifiableList(
+                new ArrayList<>(data));
+        ListIterator<String> lit = a.listIterator();
+        System.out.println(lit.next()); // Reading is OK
+        //- lit.add("one"); // Can't change it
 
-    // For a SortedSet:
-    Set<String> ss =
-      Collections.unmodifiableSortedSet(
-        new TreeSet<>(data));
+        Set<String> s = Collections.unmodifiableSet(
+                new HashSet<>(data));
+        System.out.println(s); // Reading is OK
+        //- s.add("one"); // Can't change it
 
-    Map<String,String> m =
-      Collections.unmodifiableMap(
-        new HashMap<>(Countries.capitals(6)));
-    System.out.println(m); // Reading is OK
-    //- m.put("Ralph", "Howdy!");
+        // For a SortedSet:
+        Set<String> ss =
+                Collections.unmodifiableSortedSet(
+                        new TreeSet<>(data));
 
-    // For a SortedMap:
-    Map<String,String> sm =
-      Collections.unmodifiableSortedMap(
-        new TreeMap<>(Countries.capitals(6)));
-  }
+        Map<String, String> m =
+                Collections.unmodifiableMap(
+                        new HashMap<>(Countries.capitals(6)));
+        System.out.println(m); // Reading is OK
+        //- m.put("Ralph", "Howdy!");
+
+        // For a SortedMap:
+        Map<String, String> sm =
+                Collections.unmodifiableSortedMap(
+                        new TreeMap<>(Countries.capitals(6)));
+    }
 }
 /* Output:
 [ALGERIA, ANGOLA, BENIN, BOTSWANA, BURKINA FASO,

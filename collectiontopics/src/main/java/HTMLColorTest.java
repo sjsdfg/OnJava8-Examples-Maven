@@ -2,19 +2,21 @@
 // (c)2017 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
+
 import static onjava.HTMLColors.*;
 
 public class HTMLColorTest {
-  static final int DISPLAY_SIZE = 20;
-  public static void main(String[] args) {
-    show(MAP, DISPLAY_SIZE);
-    border();
-    showInv(INVMAP, DISPLAY_SIZE);
-    border();
-    show(LIST, DISPLAY_SIZE);
-    border();
-    showrgb(RGBLIST, DISPLAY_SIZE);
-  }
+    static final int DISPLAY_SIZE = 20;
+
+    public static void main(String[] args) {
+        show(MAP, DISPLAY_SIZE);
+        border();
+        showInv(INVMAP, DISPLAY_SIZE);
+        border();
+        show(LIST, DISPLAY_SIZE);
+        border();
+        showrgb(RGBLIST, DISPLAY_SIZE);
+    }
 }
 /* Output:
 0xF0F8FF: AliceBlue

@@ -4,5 +4,5 @@
 // Visit http://OnJava8.com for more book information.
 
 abstract class Basic {
-  abstract void unimplemented();
+    abstract void unimplemented();
 }

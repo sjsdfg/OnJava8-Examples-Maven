@@ -4,7 +4,13 @@
 // Visit http://OnJava8.com for more book information.
 
 class Manipulator2<T extends HasF> {
-  private T obj;
-  Manipulator2(T x) { obj = x; }
-  public void manipulate() { obj.f(); }
+    private T obj;
+
+    Manipulator2(T x) {
+        obj = x;
+    }
+
+    public void manipulate() {
+        obj.f();
+    }
 }

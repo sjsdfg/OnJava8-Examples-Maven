@@ -4,6 +4,7 @@
 // Visit http://OnJava8.com for more book information.
 
 public interface Performs {
-  void speak();
-  void sit();
+    void speak();
+
+    void sit();
 }

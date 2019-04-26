@@ -4,5 +4,5 @@
 // Visit http://OnJava8.com for more book information.
 
 public interface HasID {
-  int getID();
+    int getID();
 }

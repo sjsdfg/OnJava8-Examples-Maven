@@ -11,5 +11,11 @@
 
     <artifactId>collections</artifactId>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>onjava8</groupId>
+            <artifactId>typeinfo</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 </project>

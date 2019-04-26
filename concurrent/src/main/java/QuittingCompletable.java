@@ -2,25 +2,28 @@
 // (c)2017 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
-import java.util.*;
-import java.util.stream.*;
-import java.util.concurrent.*;
+
 import onjava.Nap;
 
+import java.util.List;
+import java.util.concurrent.CompletableFuture;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+
 public class QuittingCompletable {
-  public static void main(String[] args) {
-    List<QuittableTask> tasks =
-      IntStream.range(1, QuittingTasks.COUNT)
-        .mapToObj(QuittableTask::new)
-        .collect(Collectors.toList());
-    List<CompletableFuture<Void>> cfutures =
-      tasks.stream()
-        .map(CompletableFuture::runAsync)
-        .collect(Collectors.toList());
-    new Nap(1);
-    tasks.forEach(QuittableTask::quit);
-    cfutures.forEach(CompletableFuture::join);
-  }
+    public static void main(String[] args) {
+        List<QuittableTask> tasks =
+                IntStream.range(1, QuittingTasks.COUNT)
+                        .mapToObj(QuittableTask::new)
+                        .collect(Collectors.toList());
+        List<CompletableFuture<Void>> cfutures =
+                tasks.stream()
+                        .map(CompletableFuture::runAsync)
+                        .collect(Collectors.toList());
+        new Nap(1);
+        tasks.forEach(QuittableTask::quit);
+        cfutures.forEach(CompletableFuture::join);
+    }
 }
 /* Output:
 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25

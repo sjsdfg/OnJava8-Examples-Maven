@@ -6,19 +6,20 @@
 // {java onjava.atunit.AtUnit
 // build/classes/main/annotations/AUExternalTest.class}
 package annotations;
-import onjava.atunit.*;
-import onjava.*;
+
+import onjava.atunit.Test;
 
 public class
 AUExternalTest extends AtUnitExample1 {
-  @Test
-  boolean tMethodOne() {
-    return methodOne().equals("This is methodOne");
-  }
-  @Test
-  boolean tMethodTwo() {
-    return methodTwo() == 2;
-  }
+    @Test
+    boolean tMethodOne() {
+        return methodOne().equals("This is methodOne");
+    }
+
+    @Test
+    boolean tMethodTwo() {
+        return methodTwo() == 2;
+    }
 }
 /* Output:
 annotations.AUExternalTest

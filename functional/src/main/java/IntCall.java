@@ -4,5 +4,5 @@
 // Visit http://OnJava8.com for more book information.
 
 interface IntCall {
-  int call(int arg);
+    int call(int arg);
 }

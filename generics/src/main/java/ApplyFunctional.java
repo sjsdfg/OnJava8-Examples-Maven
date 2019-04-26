@@ -2,32 +2,32 @@
 // (c)2017 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
-import java.util.*;
-import java.util.stream.*;
-import java.util.function.*;
-import onjava.*;
+
+import onjava.Suppliers;
+
+import java.util.stream.Stream;
 
 public class ApplyFunctional {
-  public static void main(String[] args) {
-    Stream.of(
-      Stream.generate(Shape::new).limit(2),
-      Stream.generate(Square::new).limit(2))
-      .flatMap(c -> c) // flatten into one stream
-      .peek(Shape::rotate)
-      .forEach(s -> s.resize(7));
+    public static void main(String[] args) {
+        Stream.of(
+                Stream.generate(Shape::new).limit(2),
+                Stream.generate(Square::new).limit(2))
+                .flatMap(c -> c) // flatten into one stream
+                .peek(Shape::rotate)
+                .forEach(s -> s.resize(7));
 
-    new FilledList<>(Shape::new, 2)
-      .forEach(Shape::rotate);
-    new FilledList<>(Square::new, 2)
-      .forEach(Shape::rotate);
+        new FilledList<>(Shape::new, 2)
+                .forEach(Shape::rotate);
+        new FilledList<>(Square::new, 2)
+                .forEach(Shape::rotate);
 
-    SimpleQueue<Shape> shapeQ = Suppliers.fill(
-      new SimpleQueue<>(), SimpleQueue::add,
-      Shape::new, 2);
-    Suppliers.fill(shapeQ, SimpleQueue::add,
-      Square::new, 2);
-    shapeQ.forEach(Shape::rotate);
-  }
+        SimpleQueue<Shape> shapeQ = Suppliers.fill(
+                new SimpleQueue<>(), SimpleQueue::add,
+                Shape::new, 2);
+        Suppliers.fill(shapeQ, SimpleQueue::add,
+                Square::new, 2);
+        shapeQ.forEach(Shape::rotate);
+    }
 }
 /* Output:
 Shape 0 rotate

@@ -33,6 +33,18 @@
         <module>lowlevel</module>
         <module>newio</module>
         <module>objects</module>
+        <module>operators</module>
+        <module>patterns</module>
+        <module>polymorphism</module>
+        <module>references</module>
+        <module>reuse</module>
+        <module>serialization</module>
+        <module>standardio</module>
+        <module>staticchecking</module>
+        <module>streams</module>
+        <module>strings</module>
+        <module>typeinfo</module>
+        <module>validating</module>
     </modules>
 
     <properties>
@@ -44,7 +56,17 @@
         <dependencies>
             <dependency>
                 <groupId>org.openjdk.jmh</groupId>
+                <artifactId>jmh-core</artifactId>
+                <version>1.21</version>
+            </dependency>
+            <dependency>
+                <groupId>org.openjdk.jmh</groupId>
                 <artifactId>jmh-generator-reflection</artifactId>
+                <version>1.21</version>
+            </dependency>
+            <dependency>
+                <groupId>org.openjdk.jmh</groupId>
+                <artifactId>jmh-generator-bytecode</artifactId>
                 <version>1.21</version>
             </dependency>
             <dependency>
@@ -53,10 +75,16 @@
                 <version>1.21</version>
             </dependency>
             <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter-api</artifactId>
+                <version>5.0.0-M2</version>
+            </dependency>
+            <dependency>
                 <groupId>onjava8</groupId>
                 <artifactId>onjava</artifactId>
                 <version>1.0-SNAPSHOT</version>
             </dependency>
+
         </dependencies>
     </dependencyManagement>
 
@@ -64,6 +92,11 @@
         <dependency>
             <groupId>onjava8</groupId>
             <artifactId>onjava</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>21.0</version>
         </dependency>
     </dependencies>
 

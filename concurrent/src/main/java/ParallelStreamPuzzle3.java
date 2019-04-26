@@ -3,20 +3,22 @@
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
 // {VisuallyInspectOutput}
-import java.util.*;
-import java.util.stream.*;
+
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class ParallelStreamPuzzle3 {
-  public static void main(String[] args) {
-    List<Integer> x = IntStream.range(0, 30)
-      .peek(e -> System.out.println(e + ": " +
-        Thread.currentThread().getName()))
-      .limit(10)
-      .parallel()
-      .boxed()
-      .collect(Collectors.toList());
-    System.out.println(x);
-  }
+    public static void main(String[] args) {
+        List<Integer> x = IntStream.range(0, 30)
+                .peek(e -> System.out.println(e + ": " +
+                        Thread.currentThread().getName()))
+                .limit(10)
+                .parallel()
+                .boxed()
+                .collect(Collectors.toList());
+        System.out.println(x);
+    }
 }
 /* Output:
 8: main

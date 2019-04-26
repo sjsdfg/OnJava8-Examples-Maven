@@ -5,5 +5,6 @@
 package packageaccess;
 
 class PublicConstructor {
-  public PublicConstructor() {}
+    public PublicConstructor() {
+    }
 }

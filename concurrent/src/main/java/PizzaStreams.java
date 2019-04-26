@@ -2,23 +2,25 @@
 // (c)2017 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
-import java.util.*;
-import java.util.stream.*;
+
 import onjava.Timer;
 
+import java.util.stream.IntStream;
+
 public class PizzaStreams {
-  static final int QUANTITY = 5;
-  public static void main(String[] args) {
-    Timer timer = new Timer();
-    IntStream.range(0, QUANTITY)
-      .mapToObj(Pizza::new)
-      .parallel()             // [1]
-      .forEach(za -> {
-        while(!za.complete())
-          za.next();
-      });
-    System.out.println(timer.duration());
-  }
+    static final int QUANTITY = 5;
+
+    public static void main(String[] args) {
+        Timer timer = new Timer();
+        IntStream.range(0, QUANTITY)
+                .mapToObj(Pizza::new)
+                .parallel()             // [1]
+                .forEach(za -> {
+                    while (!za.complete())
+                        za.next();
+                });
+        System.out.println(timer.duration());
+    }
 }
 /* Output:
 Pizza 2: ROLLED

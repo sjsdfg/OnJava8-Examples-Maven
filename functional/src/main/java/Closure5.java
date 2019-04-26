@@ -3,13 +3,14 @@
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
 // {WillNotCompile}
-import java.util.function.*;
+
+import java.util.function.IntSupplier;
 
 public class Closure5 {
-  IntSupplier makeFun(int x) {
-    int i = 0;
-    i++;
-    x++;
-    return () -> x + i;
-  }
+    IntSupplier makeFun(int x) {
+        int i = 0;
+        i++;
+        x++;
+        return () -> x + i;
+    }
 }

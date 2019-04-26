@@ -3,27 +3,29 @@
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
 // Displays Charsets and aliases
-import java.nio.charset.*;
-import java.util.*;
+
+import java.nio.charset.Charset;
+import java.util.Iterator;
+import java.util.SortedMap;
 
 public class AvailableCharSets {
-  public static void main(String[] args) {
-    SortedMap<String,Charset> charSets =
-      Charset.availableCharsets();
-    for(String csName : charSets.keySet()) {
-      System.out.print(csName);
-      Iterator aliases = charSets.get(csName)
-        .aliases().iterator();
-      if(aliases.hasNext())
-        System.out.print(": ");
-      while(aliases.hasNext()) {
-        System.out.print(aliases.next());
-        if(aliases.hasNext())
-          System.out.print(", ");
-      }
-      System.out.println();
+    public static void main(String[] args) {
+        SortedMap<String, Charset> charSets =
+                Charset.availableCharsets();
+        for (String csName : charSets.keySet()) {
+            System.out.print(csName);
+            Iterator aliases = charSets.get(csName)
+                    .aliases().iterator();
+            if (aliases.hasNext())
+                System.out.print(": ");
+            while (aliases.hasNext()) {
+                System.out.print(aliases.next());
+                if (aliases.hasNext())
+                    System.out.print(", ");
+            }
+            System.out.println();
+        }
     }
-  }
 }
 /* Output: (First 7 Lines)
 Big5: csBig5

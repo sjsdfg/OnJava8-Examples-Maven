@@ -4,5 +4,5 @@
 // Visit http://OnJava8.com for more book information.
 
 public enum Spiciness {
-  NOT, MILD, MEDIUM, HOT, FLAMING
+    NOT, MILD, MEDIUM, HOT, FLAMING
 }

@@ -5,20 +5,22 @@
 // {WillNotCompile}
 
 public class Erased<T> {
-  private final int SIZE = 100;
-  public void f(Object arg) {
+    private final int SIZE = 100;
 
-    // error: illegal generic type for instanceof
-    if(arg instanceof T) {}
+    public void f(Object arg) {
 
-    // error: unexpected type
-    T var = new T();
+        // error: illegal generic type for instanceof
+        if (arg instanceof T) {
+        }
 
-    // error: generic array creation
-    T[] array = new T[SIZE];
+        // error: unexpected type
+        T var = new T();
 
-    // warning: [unchecked] unchecked cast
-    T[] array = (T[])new Object[SIZE];
+        // error: generic array creation
+        T[] array = new T[SIZE];
 
-  }
+        // warning: [unchecked] unchecked cast
+        T[] array = (T[]) new Object[SIZE];
+
+    }
 }

@@ -4,13 +4,14 @@
 // Visit http://OnJava8.com for more book information.
 // {WillNotCompile}
 
-class Anything {}
+class Anything {
+}
 
 public class TryAnything {
-  public static void main(String[] args) {
-    try(
-      Anything a = new Anything()
-    ) {
+    public static void main(String[] args) {
+        try (
+                Anything a = new Anything()
+        ) {
+        }
     }
-  }
 }

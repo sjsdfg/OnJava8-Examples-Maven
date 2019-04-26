@@ -4,6 +4,7 @@
 // Visit http://OnJava8.com for more book information.
 
 interface AnInterface {
-  void firstMethod();
-  void secondMethod();
+    void firstMethod();
+
+    void secondMethod();
 }

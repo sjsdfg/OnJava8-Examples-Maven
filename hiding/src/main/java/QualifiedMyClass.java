@@ -4,8 +4,8 @@
 // Visit http://OnJava8.com for more book information.
 
 public class QualifiedMyClass {
-  public static void main(String[] args) {
-    hiding.mypackage.MyClass m =
-      new hiding.mypackage.MyClass();
-  }
+    public static void main(String[] args) {
+        hiding.mypackage.MyClass m =
+                new hiding.mypackage.MyClass();
+    }
 }

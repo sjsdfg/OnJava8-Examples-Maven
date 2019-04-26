@@ -2,40 +2,41 @@
 // (c)2017 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
-import java.util.*;
-import java.util.function.*;
-import onjava.*;
+
+import onjava.Suppliers;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ApplyTest {
-  public static
-  void main(String[] args) throws Exception {
-    List<Shape> shapes =
-      Suppliers.create(ArrayList::new, Shape::new, 3);
-    Apply.apply(shapes,
-      Shape.class.getMethod("rotate"));
-    Apply.apply(shapes,
-      Shape.class.getMethod("resize", int.class), 7);
+    public static void main(String[] args) throws Exception {
+        List<Shape> shapes =
+                Suppliers.create(ArrayList::new, Shape::new, 3);
+        Apply.apply(shapes,
+                Shape.class.getMethod("rotate"));
+        Apply.apply(shapes,
+                Shape.class.getMethod("resize", int.class), 7);
 
-    List<Square> squares =
-      Suppliers.create(ArrayList::new, Square::new, 3);
-    Apply.apply(squares,
-      Shape.class.getMethod("rotate"));
-    Apply.apply(squares,
-      Shape.class.getMethod("resize", int.class), 7);
+        List<Square> squares =
+                Suppliers.create(ArrayList::new, Square::new, 3);
+        Apply.apply(squares,
+                Shape.class.getMethod("rotate"));
+        Apply.apply(squares,
+                Shape.class.getMethod("resize", int.class), 7);
 
-    Apply.apply(new FilledList<>(Shape::new, 3),
-      Shape.class.getMethod("rotate"));
-    Apply.apply(new FilledList<>(Square::new, 3),
-      Shape.class.getMethod("rotate"));
+        Apply.apply(new FilledList<>(Shape::new, 3),
+                Shape.class.getMethod("rotate"));
+        Apply.apply(new FilledList<>(Square::new, 3),
+                Shape.class.getMethod("rotate"));
 
-    SimpleQueue<Shape> shapeQ = Suppliers.fill(
-      new SimpleQueue<>(), SimpleQueue::add,
-      Shape::new, 3);
-    Suppliers.fill(shapeQ, SimpleQueue::add,
-      Square::new, 3);
-    Apply.apply(shapeQ,
-      Shape.class.getMethod("rotate"));
-  }
+        SimpleQueue<Shape> shapeQ = Suppliers.fill(
+                new SimpleQueue<>(), SimpleQueue::add,
+                Shape::new, 3);
+        Suppliers.fill(shapeQ, SimpleQueue::add,
+                Square::new, 3);
+        Apply.apply(shapeQ,
+                Shape.class.getMethod("rotate"));
+    }
 }
 /* Output:
 Shape 0 rotate

@@ -3,12 +3,16 @@
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
 package annotations;
-import onjava.atunit.*;
+
+import onjava.atunit.Test;
 
 public class Testable {
-  public void execute() {
-    System.out.println("Executing..");
-  }
-  @Test
-  void testExecute() { execute(); }
+    public void execute() {
+        System.out.println("Executing..");
+    }
+
+    @Test
+    void testExecute() {
+        execute();
+    }
 }

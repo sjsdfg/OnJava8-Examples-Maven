@@ -4,7 +4,10 @@
 // Visit http://OnJava8.com for more book information.
 
 public class StaticIDField implements HasID {
-  private static int counter = 0;
-  private int id = counter++;
-  public int getID() { return id; }
+    private static int counter = 0;
+    private int id = counter++;
+
+    public int getID() {
+        return id;
+    }
 }

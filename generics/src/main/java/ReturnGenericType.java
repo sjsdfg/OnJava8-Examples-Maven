@@ -4,7 +4,13 @@
 // Visit http://OnJava8.com for more book information.
 
 class ReturnGenericType<T extends HasF> {
-  private T obj;
-  ReturnGenericType(T x) { obj = x; }
-  public T get() { return obj; }
+    private T obj;
+
+    ReturnGenericType(T x) {
+        obj = x;
+    }
+
+    public T get() {
+        return obj;
+    }
 }

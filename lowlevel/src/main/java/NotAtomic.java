@@ -6,9 +6,15 @@
 // {VisuallyInspectOutput}
 
 public class NotAtomic {
-  int i;
-  void f1() { i++; }
-  void f2() { i += 3; }
+    int i;
+
+    void f1() {
+        i++;
+    }
+
+    void f2() {
+        i += 3;
+    }
 }
 /* Output:
 Compiled from "NotAtomic.java"
