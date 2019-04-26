@@ -3,12 +3,12 @@
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
 
-import generics.watercolors.*;
+import watercolors.*;
 
 import java.util.EnumSet;
 import java.util.Set;
 
-import static generics.watercolors.Watercolors.*;
+import static watercolors.Watercolors.*;
 import static onjava.Sets.*;
 
 public class WatercolorSets {
