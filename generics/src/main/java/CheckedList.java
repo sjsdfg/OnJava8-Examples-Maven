@@ -6,6 +6,7 @@
 
 import pets.Dog;
 import pets.Pet;
+import pets.Cat;
 
 import java.util.ArrayList;
 import java.util.Collections;
