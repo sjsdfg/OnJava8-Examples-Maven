@@ -13,6 +13,17 @@
         <module>onjava</module>
         <module>arrays</module>
         <module>collections</module>
+        <module>collectiontopics</module>
+        <module>com</module>
+        <module>compression</module>
+        <module>concurrent</module>
+        <module>control</module>
+        <module>enums</module>
+        <module>equalshashcode</module>
+        <module>exceptions</module>
+        <module>files</module>
+        <module>functional</module>
+        <module>generics</module>
     </modules>
 
     <properties>
