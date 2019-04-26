@@ -24,6 +24,15 @@
         <module>files</module>
         <module>functional</module>
         <module>generics</module>
+        <module>hiding</module>
+        <module>housekeeping</module>
+        <module>innerclasses</module>
+        <module>interfaces</module>
+        <module>iostreams</module>
+        <module>javadoc</module>
+        <module>lowlevel</module>
+        <module>newio</module>
+        <module>objects</module>
     </modules>
 
     <properties>
