@@ -4,7 +4,7 @@ this is the maven version of OnJava8-Examples https://github.com/BruceEckel/OnJa
 
 more easier to import
 
-but not guarantee this is code is run ok.
+no guarantee that this is code is run ok.
 
 because some code just show you the wrong way, like this:
 
